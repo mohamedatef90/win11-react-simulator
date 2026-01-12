@@ -1,0 +1,5 @@
+{
+  "name": "Win11 React Simulator",
+  "description": "A high-fidelity Windows 11 desktop simulation built with React and Tailwind CSS, featuring a functional taskbar, start menu, draggable windows, and an integrated Gemini AI assistant.",
+  "requestFramePermissions": []
+}
