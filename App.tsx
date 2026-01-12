@@ -16,7 +16,7 @@ const App: React.FC = () => {
   const [openWindows, setOpenWindows] = useState<WindowState[]>([]);
   const [activeWindowId, setActiveWindowId] = useState<string | null>(null);
   const [isStartOpen, setIsStartOpen] = useState(false);
-  const [isLocked, setIsLocked] = useState(true);
+  const [isLocked, setIsLocked] = useState(true); // Always start locked
   const [maxZIndex, setMaxZIndex] = useState(INITIAL_Z_INDEX);
   const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -26,7 +26,6 @@ const App: React.FC = () => {
   }, []);
 
   const openApp = useCallback((type: AppType) => {
-    // Specialized behavior for Lock Screen
     if (type === AppType.LOCK_SCREEN) {
       setIsLocked(true);
       setIsStartOpen(false);
